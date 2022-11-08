@@ -3,7 +3,7 @@ const btnPari = document.getElementById("btnpari");
 const btnDispari = document.getElementById("btndispari");
 const vincente = document.getElementById("vincitore")
 const chiVince = document.getElementById("chivince");
-const numeroUtente = "";
+let numeroUtente = "";
 const btnNumeroUt = document.getElementById("btnnumeroUt");
 
 let sceltaUtente = 0;
@@ -13,8 +13,9 @@ let risultatoSomma = "";
 let somma = "";
 
 btnNumeroUt.addEventListener("click", function () {
-    let numero = document.getElementById(numeroUt);
-    console.log(numero);
+    let numero = document.getElementById("numeroUt").value;
+    numeroUtente = numero;
+    console.log(numeroUtente);
 })
 
 btnPari.addEventListener("click", function() {
@@ -33,8 +34,7 @@ function numerorandom() {
     return numeroCpu = Math.floor(Math.random()*(5-1+1)+1);
 }
 
-numerorandom();
-console.log(numeroCpu);
+
 
 
 function sommacontrollo(num1 , num2) {
@@ -46,12 +46,15 @@ function sommacontrollo(num1 , num2) {
     }
 }
 
-sommacontrollo(parseInt(numeroUtente) , parseInt(numeroCpu));
 
-console.log(risultatoSomma);
-console.log(somma);
 
 chiVince.addEventListener("click" ,function() {
+    numerorandom();
+    console.log(numeroCpu);
+    sommacontrollo(parseInt(numeroUtente) , parseInt(numeroCpu));
+    console.log(risultatoSomma);
+    console.log(somma);
+    
     if(sceltaUtente === "pari"){
         if(risultatoSomma === "pari"){
             vincente.innerHTML = "VINCE L'UTENTE";
