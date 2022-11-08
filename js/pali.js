@@ -1,4 +1,7 @@
-const parolaUtente = prompt("inserisci una parola!");
+const btnAvvia = document.getElementById("btneser1");
+
+btnAvvia.addEventListener("click", function() {
+    const parolaUtente = prompt("inserisci una parola!");
 
 
 const arrayParolaOk = parolaUtente.split("");
@@ -31,3 +34,6 @@ if (controllopali === true){
 } else {
     let result = alert("non è poli");
 }
+})
+
+
