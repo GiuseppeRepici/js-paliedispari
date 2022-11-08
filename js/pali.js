@@ -14,9 +14,11 @@ function controllopalindroma() {
 
         if (arrayParolaOk[i] === arrayInvertito[i]){
             controllopali = true;
-        } else 
+        } else {
             controllopali = false;
-            i = 100;
+            i = arrayParolaOk.length;
+        }
+            
         
     }
 
