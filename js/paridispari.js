@@ -1,7 +1,7 @@
 
 const btnPari = document.getElementById("btnpari");
 const btnDispari = document.getElementById("btndispari");
-const vincente = document.getElementById("vincitore")
+const stampaVincitore = document.getElementById("vincitore")
 const chiVince = document.getElementById("chivince");
 let numeroUtente = "";
 const btnNumeroUt = document.getElementById("btnnumeroUt");
@@ -30,7 +30,6 @@ btnDispari.addEventListener("click", function() {
 
 
 function numerorandom() {
-    
     return numeroCpu = Math.floor(Math.random()*(5-1+1)+1);
 }
 
@@ -57,15 +56,15 @@ chiVince.addEventListener("click" ,function() {
     
     if(sceltaUtente === "pari"){
         if(risultatoSomma === "pari"){
-            vincente.innerHTML = "VINCE L'UTENTE";
+            stampaVincitore.innerHTML = "VINCE L'UTENTE";
         } else {
-            vincente.innerHTML = "VINCE LA CPU";
+            stampaVincitore.innerHTML = "VINCE LA CPU";
         }
     }else {
         if(risultatoSomma === "dispari"){
-            vincente.innerHTML = "VINCE L'UTENTE";
+            stampaVincitore.innerHTML = "VINCE L'UTENTE";
         } else {
-            vincente.innerHTML = "VINCE LA CPU";
+            stampaVincitore.innerHTML = "VINCE LA CPU";
         }
     }    
 })

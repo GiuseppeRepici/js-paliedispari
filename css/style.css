@@ -1,5 +1,16 @@
-.margin{
+.sezione1{
+    background-color: gold;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sezione2{
     margin-top: 100px; 
     background-color: blue;
     color: gold;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
