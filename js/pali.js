@@ -30,9 +30,9 @@ function controllopalindroma() {
 controllopalindroma();
 
 if (controllopali === true){
-    let result = alert("è poli");
+    let result = alert("la parola inserita è palindroma");
 } else {
-    let result = alert("non è poli");
+    let result = alert("la parola inserita non è palindroma");
 }
 })
 
